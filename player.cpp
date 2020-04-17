@@ -34,6 +34,11 @@ bool Player::checkHandForBook(Card &c1, Card &c2)
 Card Player::chooseCardFromHand() const
 {
     unsigned long randomCard = (rand()%myHand.size());
+    for(int i=0; i < myHand.size(); i++) {
+        if (myHand[randomCard].getRank() == myHand[i].getRank()){
+            randomCard = (rand()%myHand.size());
+        }
+    }
     return myHand[randomCard];
 }
 

@@ -1,5 +1,5 @@
 final: go_fish.o player.o deck.o card.o
-	g++ -std=c++11 -o go_Fish  go_fish.o player.o deck.o card.o
+	g++ -std=c++11 -o go_fish  go_fish.o player.o deck.o card.o
 go_fish.o: go_fish.cpp player.h deck.h card.h
 	g++ -std=c++11 -c go_fish.cpp
 player.o: player.cpp player.h deck.h

@@ -27,11 +27,8 @@ void Deck::shuffle()
         long offset2 = (rand()%SIZE);
         Card temp = Card(myCards[offset1].getRank(), myCards[offset1].getSuit());
         myCards[offset1]=myCards[offset2];
-        myCards[offset2]=Card(temp.getRank(), temp.getSuit());          //MIGHT REACH END OF SCOPE NOT VIABLE
+        myCards[offset2]=Card(temp.getRank(), temp.getSuit());
     }
-
-
-
 }
 
 Card Deck::dealCard()
@@ -40,8 +37,6 @@ Card Deck::dealCard()
         Card temp= myCards[myIndex];
         myIndex++;
         return temp;
-    } else {
-        cout << "All Cards Dealt - deck empty" << endl;
     }
 }
 
@@ -54,13 +49,5 @@ int Deck::getIndex()
 {
     return myIndex;
 }
-//
-string Deck::showDeck()
-{
-    string temp="";
-    for (int i=0; i<SIZE; i++)
-        temp = temp + myCards[i].toString() + " ";
 
-    return temp;
-}
 
