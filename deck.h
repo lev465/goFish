@@ -1,6 +1,6 @@
 // FILE: deck.h
 // written by Owen Astrachan and Roger Priebe
-// this class respresents a deck of cards
+// this class represents a deck of cards
 // When a Deck is constructed, it contains 52 cards
 // in a "regular" order (aces, twos, threes, ... , kings)
 //
@@ -32,6 +32,12 @@ public:
     Card dealCard();   // get a card, after 52 are dealt, fail
 
     int  size() const; // # cards left in the deck
+
+
+
+    int getIndex();
+//
+    string showDeck();
 
 private:
 
